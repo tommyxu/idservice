@@ -24,7 +24,7 @@ Several endpoints:
 -   `/id/random/64`
 -   `/id/uuid`
 
-Browse `/docs` (http://localhost:8000/docs) to read all APIs.
+Browse `/docs` (default to http://localhost:8000/docs) to read all APIs.
 
 ## Configuration
 

@@ -6,15 +6,15 @@ name = "pypi"
 [packages]
 fastapi = "*"
 configprops = "*"
-yapf = "*"
 uvicorn = {extras = ["standard"], version = "*"}
-twine = "*"
+gunicorn = "*"
 
 [dev-packages]
+twine = "*"
 ipython = "*"
 mypy = "*"
-gunicorn = "*"
 pipenv-setup = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.9"
