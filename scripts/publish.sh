@@ -1,3 +1,3 @@
 #!/bin/bash
-TWINE_USERNAME=xuyijun
+export TWINE_USERNAME=xuyijun
 twine upload dist/*
