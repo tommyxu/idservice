@@ -13,6 +13,7 @@ uvicorn = {extras = ["standard"], version = "*"}
 ipython = "*"
 mypy = "*"
 gunicorn = "*"
+pipenv-setup = "*"
 
 [requires]
 python_version = "3.9"
