@@ -8,6 +8,7 @@ fastapi = "*"
 configprops = "*"
 yapf = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+twine = "*"
 
 [dev-packages]
 ipython = "*"
