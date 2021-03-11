@@ -30,6 +30,6 @@ Browse `/docs` (default to http://localhost:8000/docs) to read all APIs.
 
 Environment variable:
 
-| Environment Vars        | Usage                                  | Default        |
-| ----------------------- | -------------------------------------- | -------------- |
-| `ID_SERVICE_MACHINE_ID` | Snowflake Machine ID (10 bits integer) | Random (0-255) |
+| Environment Vars        | Usage                                  | Default |
+| ----------------------- | -------------------------------------- | ------- |
+| `ID_SERVICE_MACHINE_ID` | Snowflake Machine ID (10 bits integer) | Random  |
