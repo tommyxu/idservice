@@ -87,7 +87,7 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         # Indicate who your project is intended for
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Build Tools",
@@ -108,7 +108,7 @@ setup(
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords="sample setuptools development",  # Optional
+    keywords="distributed id service setuptools development",  # Optional
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
     #
@@ -196,9 +196,9 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        "Bug Reports": "https://github.com/pypa/sampleproject/issues",
-        "Funding": "https://donate.pypi.org",
-        "Say Thanks!": "http://saythanks.io/to/example",
-        "Source": "https://github.com/pypa/sampleproject/",
+        "Bug Reports": "https://github.com/tommyxu/idservice/issues",
+        # "Funding": "https://donate.pypi.org",
+        # "Say Thanks!": "http://saythanks.io/to/example",
+        "Source": "https://github.com/tommyxu/idservice",
     },
 )
