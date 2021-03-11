@@ -135,6 +135,7 @@ setup(
         "click==7.1.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
         "configprops==1.1.0",
         "fastapi==0.63.0",
+        "gunicorn==20.0.4",
         "h11==0.12.0; python_version >= '3.6'",
         "httptools==0.1.1",
         "ptable==0.9.2",
@@ -147,7 +148,6 @@ setup(
         "uvloop==0.15.2",
         "watchgod==0.7",
         "websockets==8.1",
-        "yapf==0.30.0",
     ],  # Optional
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
@@ -182,7 +182,7 @@ setup(
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # `pip` to create the appropriate form of executable for the target
     # platform.
-    scripts=['bin/idservice-start'],
+    scripts=["bin/idservice-start"],
     # For example, the following would provide a command called `sample` which
     # executes the function `main` from this package when invoked:
     # entry_points={"console_scripts": ["sample=sample:main"]},  # Optional
