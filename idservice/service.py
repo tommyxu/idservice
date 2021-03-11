@@ -4,6 +4,7 @@ import math
 import time
 import asyncio
 import secrets
+from idservice.config import config
 
 
 async def snowflake_generator(machine_id: int):
@@ -26,7 +27,7 @@ def anext(x: AsyncGenerator):
     return x.__anext__()
 
 
-_sf_instance = snowflake_generator(0)
+_sf_instance = snowflake_generator(config.ID_SERVICE_MACHINE_ID)
 
 
 async def generate_snowflake():
@@ -43,7 +44,7 @@ async def generate_uuid():
     }
 
 
-async def generate_random(bits: int = 32):
+async def generate_random(bits):
     v = secrets.randbits(bits)
     hl = math.floor(bits // 4)
     return {'id': v, 'id_str': str(v), 'id_hex': format(v, f'0{hl}X')}
