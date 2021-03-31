@@ -1,2 +1,0 @@
-#!/bin/sh
-uvicorn idservice:app --no-access-log --loop uvloop $*
