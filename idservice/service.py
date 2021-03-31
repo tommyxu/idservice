@@ -17,9 +17,9 @@ async def snowflake_generator(machine_id: int):
             seq = 0
         else:
             seq += 1
-        if seq >= 4096:
-            await asyncio.sleep(0.001)
-            continue
+            if seq >= 4096:
+                await asyncio.sleep(0.001)
+                continue
         yield (seq | machine_id << 12 | t << 22)
 
 
@@ -32,19 +32,19 @@ _sf_instance = snowflake_generator(config.ID_SERVICE_MACHINE_ID)
 
 async def generate_snowflake():
     v = await anext(_sf_instance)
-    return {'id': v, 'id_str': str(v), 'id_hex': f'{v:016X}'}
+    return {"id": v, "id_str": str(v), "id_hex": f"{v:016X}"}
 
 
 async def generate_uuid():
     v = uuid.uuid4()
     return {
-        'id_str': str(v),
-        'id_hex': v.hex,
-        'id': v.int,
+        "id_str": str(v),
+        "id_hex": v.hex,
+        "id": v.int,
     }
 
 
 async def generate_random(bits):
     v = secrets.randbits(bits)
     hl = math.floor(bits // 4)
-    return {'id': v, 'id_str': str(v), 'id_hex': format(v, f'0{hl}X')}
+    return {"id": v, "id_str": str(v), "id_hex": format(v, f"0{hl}X")}
