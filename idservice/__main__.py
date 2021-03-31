@@ -1,13 +1,12 @@
 import sys
-import subprocess
-from uvicorn.main import main
+from uvicorn.main import main as uvicorn_main
 
 
-def start():
+def main():
     args = "idservice.api:app --no-access-log --loop uvloop".split(" ")
     sys.argv.extend(args)
-    main()
+    sys.exit(uvicorn_main())
 
 
 if __name__ == "__main__":
-    start()
+    main()
