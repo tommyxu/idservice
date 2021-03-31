@@ -1,8 +1,8 @@
-from uvicorn.main import main
 import sys
+import subprocess
+from uvicorn.main import main
 
 if __name__ == "__main__":
-    # uvicorn.run("idservice:app", host="127.0.0.1", port=8000, log_level="info")
-    #   --env-file PATH                 Environment configuration file.
-    sys.argv.append('idservice:app')
+    args = "idservice:app --no-access-log --loop uvloop".split(" ")
+    sys.argv.extend(args)
     main()

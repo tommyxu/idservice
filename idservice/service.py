@@ -27,7 +27,7 @@ def anext(x: AsyncGenerator):
     return x.__anext__()
 
 
-_sf_instance = snowflake_generator(config.ID_SERVICE_MACHINE_ID)
+_sf_instance = snowflake_generator(config.ID_SERVICE_SNOWFLAKE_MACHINE_ID)
 
 
 async def generate_snowflake():

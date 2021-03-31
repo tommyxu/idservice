@@ -1,15 +1,41 @@
 [tool.poetry]
 name = "idservice"
-version = "0.1.0"
-description = ""
+version = "1.0.0"
+description = "Distributed ID generator microservice based on FastAPI"
 authors = ["Xu Yijun <xuyijun@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/tommyxu/idservice"
+repository = "https://github.com/tommyxu/idservice"
+classifiers=[  # Optional
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 4 - Beta",
+    # Indicate who your project is intended for
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    # Pick your license as you wish
+    "License :: OSI Approved :: MIT License",
+    # Specify the Python versions you support here. In particular, ensure
+    # that you indicate whether you support Python 2, Python 3 or both.
+    # These classifiers are *not* checked by 'pip install'. See instead
+    # 'python_requires' below.
+    # "Programming Language :: Python :: 2",
+    # "Programming Language :: Python :: 2.7",
+    # "Programming Language :: Python :: 3",
+    # "Programming Language :: Python :: 3.5",
+    # "Programming Language :: Python :: 3.6",
+    # "Programming Language :: Python :: 3.7",
+    "Environment :: Console",
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-uvicorn = "^0.13.4"
 fastapi = "^0.63.0"
 configprops = "^1.4.0"
-meinheld = "^1.0.2"
+mypy = "^0.812"
+uvicorn = {extras = ["standard"], version = "^0.13.4"}
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
@@ -17,3 +43,6 @@ black = "^20.8b1"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+idservice-start = 'idservice'

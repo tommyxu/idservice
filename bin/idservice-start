@@ -1,2 +1,2 @@
-#!/bin/bash
-gunicorn idservice:app -k uvicorn.workers.UvicornWorker $*
+#!/bin/sh
+uvicorn idservice:app --no-access-log --loop uvloop $*

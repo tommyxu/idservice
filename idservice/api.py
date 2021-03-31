@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/api/version")
 async def get_version():
-    return {'version': '1.0'}
+    return {"version": "1.0"}
 
 
 @app.get("/api/uuid")
