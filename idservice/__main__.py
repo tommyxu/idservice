@@ -3,7 +3,7 @@ from uvicorn.main import main as uvicorn_main
 
 
 def main():
-    args = "idservice.api:app --no-access-log --loop uvloop".split(" ")
+    args = "idservice.api:app --loop uvloop".split(" ")
     sys.argv.extend(args)
     sys.exit(uvicorn_main())
 
