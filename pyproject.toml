@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "idservice"
-version = "1.2.2"
+version = "1.2.3"
 description = "Distributed ID generator microservice based on FastAPI"
 authors = ["Xu Yijun <xuyijun@gmail.com>"]
 license = "MIT"
+readme = "README.md"
 homepage = "https://github.com/tommyxu/idservice"
 repository = "https://github.com/tommyxu/idservice"
 classifiers=[  # Optional
