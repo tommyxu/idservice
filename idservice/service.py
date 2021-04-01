@@ -6,6 +6,8 @@ import asyncio
 import secrets
 from idservice.config import config
 
+m_id = config.ID_SERVICE_SNOWFLAKE_MACHINE_ID
+
 
 async def snowflake_generator(machine_id: int):
     seq = 0
@@ -27,12 +29,12 @@ def anext(x: AsyncGenerator):
     return x.__anext__()
 
 
-_sf_instance = snowflake_generator(config.ID_SERVICE_SNOWFLAKE_MACHINE_ID)
+_sf_instance = snowflake_generator(m_id)
 
 
 async def generate_snowflake():
     v = await anext(_sf_instance)
-    return {"id": v, "id_str": str(v), "id_hex": f"{v:016X}"}
+    return {"id": v, "id_str": str(v), "id_hex": f"{v:016X}", "m_id": m_id}
 
 
 async def generate_uuid():

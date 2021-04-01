@@ -1,11 +1,13 @@
 import sys
-from uvicorn.main import main as uvicorn_main
+from gunicorn.app.wsgiapp import run
+from pathlib import Path
 
 
 def main():
-    args = "idservice.api:app --loop uvloop".split(" ")
+    package_name = Path(__file__).parent.name
+    args = (f"-k uvicorn.workers.UvicornWorker {package_name}.api:app").split(" ")
     sys.argv.extend(args)
-    sys.exit(uvicorn_main())
+    sys.exit(run())
 
 
 if __name__ == "__main__":
