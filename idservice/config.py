@@ -7,7 +7,6 @@ class Config(ConfigurationProperties):
 
     def __init__(self):
         super().__init__("ID_SERVICE", debug=True)
-        # print(self.get_config_summary())
 
 
 config = Config()
