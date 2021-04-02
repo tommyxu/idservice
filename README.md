@@ -33,3 +33,6 @@ Environment variable:
 | Environment Vars                  | Usage                          | Default |
 | --------------------------------- | ------------------------------ | ------- |
 | `ID_SERVICE_SNOWFLAKE_MACHINE_ID` | Snowflake Machine ID (10 bits) | Random  |
+
+Snowflake is configured as: BIT_0(1)+TIMESTAMP(41)+MACHINE_ID(10)+SEQ(12)
+
