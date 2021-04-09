@@ -1,4 +1,4 @@
 *
 
-!build/release
-!dockerfile
+!dockerfiles
+!idservice/**/*.py
