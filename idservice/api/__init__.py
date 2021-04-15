@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from idservice.service import generate_uuid, generate_snowflake, generate_random
+from idservice.api.service import generate_uuid, generate_snowflake, generate_random
 
 app = FastAPI()
 

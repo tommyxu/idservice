@@ -4,7 +4,7 @@ import math
 import time
 import asyncio
 import secrets
-from idservice.config import config
+from idservice.api.config import config
 
 m_id = config.ID_SERVICE_SNOWFLAKE_MACHINE_ID
 

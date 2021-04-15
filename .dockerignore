@@ -1,6 +1,6 @@
 *
 
 !dockerfiles
-!idservice/**/*.py
+!idservice
 !poetry.lock
 !pyproject.toml
